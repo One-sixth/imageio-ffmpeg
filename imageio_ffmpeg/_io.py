@@ -123,6 +123,7 @@ def read_frames(path, pix_fmt="rgb24", bpp=3, input_params=None, output_params=N
     cmd = [_get_exe()]
     cmd += input_params + ["-i", path]
     cmd += pre_output_params + output_params + ["-"]
+    cmd = ' '.join(cmd)
 
     p = subprocess.Popen(
         cmd,
